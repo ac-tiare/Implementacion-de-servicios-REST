@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Inscripciones</title>
+<style>
+    body {
+    font-family: sans-serif;
+    background: #f0f4f8;
+    padding: 30px;
+    }
+
+    h1 {
+    background: #1e293b;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 6px;
+    }
+
+    table {
+    inline-size: 100%;
+    border-collapse: collapse;
+    margin-block-start: 20px;
+    background: white;
+    }
+
+    th, td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    }
+
+    th {
+    background-color: #3b82f6;
+    color: white;
+    }
+
+    form {
+    background: white;
+    padding: 20px;
+    border-radius: 6px;
+    margin-block-start: 30px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    input {
+    inlinze-size: 100%;
+    padding: 10px;
+    margin: 5px 0 15px 0;
+    border: 1px solid #ccc;
+    }
+
+    button {
+    padding: 10px 20px;
+    background: #1d4ed8;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    }
+</style>
+</head>
+<body>
+<h1>Inscripciones</h1>
+
+<table>
+<thead>
+<tr>
+    <th>ID</th>
+    <th>Usuario</th>
+    <th>Curso</th>
+    <th>Fecha</th>
+</tr>
+</thead>
+<tbody>
+<tr th:each="i : ${inscripciones}">
+    <td th:text="${i.id}"></td>
+    <td th:text="${i.nombreUsuario}"></td>
+    <td th:text="${i.tituloCurso}"></td>
+    <td th:text="${i.fecha}"></td>
+</tr>
+<tr th:if="${#lists.isEmpty(inscripciones)}">
+    <td colspan="4">No hay inscripciones registradas.</td>
+</tr>
+</tbody>
+</table>
+
+<form th:action="@{/inscripciones/agregar}" method="post">
+<h2>Agregar inscripción</h2>
+<input type="number" name="usuarioId" placeholder="ID Usuario" required>
+<input type="number" name="cursoId" placeholder="ID Curso" required>
+<button type="submit">Guardar</button>
+</form>
+
+</body>
+</html>
