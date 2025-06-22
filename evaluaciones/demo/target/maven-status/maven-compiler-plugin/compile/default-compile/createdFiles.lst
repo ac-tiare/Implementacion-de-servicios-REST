@@ -1,0 +1,6 @@
+com\edutech\evaluaciones\controller\EvaluacionController.class
+com\edutech\evaluaciones\evaluaciones\EvaluacionesApplication.class
+com\edutech\evaluaciones\model\Evaluacion.class
+com\edutech\evaluaciones\repository\EvaluacionRepository.class
+com\edutech\evaluaciones\model\Pregunta.class
+com\edutech\evaluaciones\service\EvaluacionService.class
