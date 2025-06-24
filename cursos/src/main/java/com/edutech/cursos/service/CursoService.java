@@ -2,33 +2,11 @@ package com.edutech.cursos.service;
 
 import java.util.List;
 
-import org.springframework.stereotype.Service;
-
 import com.edutech.cursos.model.Curso;
-import com.edutech.cursos.repository.CursoRepository;
 
-@Service
-public class CursoService {
-
-    private final CursoRepository cursoRepository;
-
-    public CursoService(CursoRepository cursoRepository) {
-        this.cursoRepository = cursoRepository;
-    }
-
-    public List<Curso> listarCursos() {
-        return cursoRepository.findAll();
-    }
-
-    public Curso guardarCurso(Curso curso) {
-        return cursoRepository.save(curso);
-    }
-
-    public Curso obtenerCurso(Long id) {
-        return cursoRepository.findById(id).orElse(null);
-    }
-
-    public void eliminarCurso(Long id) {
-        cursoRepository.deleteById(id);
-    }
+public interface CursoService {
+    List<Curso> listarCursos();
+    Curso guardarCurso(Curso curso);
+    Curso obtenerCurso(Long id);
+    void eliminarCurso(Long id);
 }

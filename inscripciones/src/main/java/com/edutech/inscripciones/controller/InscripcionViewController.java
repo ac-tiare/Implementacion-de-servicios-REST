@@ -15,15 +15,15 @@ import com.edutech.inscripciones.dto.CursoDTO;
 import com.edutech.inscripciones.dto.InscripcionDetalle;
 import com.edutech.inscripciones.dto.UsuarioDTO;
 import com.edutech.inscripciones.model.Inscripcion;
-import com.edutech.inscripciones.service.InscripcionService;
+import com.edutech.inscripciones.service.InscripcionServiceImpl;
 
 @Controller
 public class InscripcionViewController {
 
-    private final InscripcionService inscripcionService;
+    private final InscripcionServiceImpl inscripcionService;
     private final RestTemplate restTemplate = new RestTemplate();
 
-    public InscripcionViewController(InscripcionService inscripcionService) {
+    public InscripcionViewController(InscripcionServiceImpl inscripcionService) {
         this.inscripcionService = inscripcionService;
     }
 

@@ -11,15 +11,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.edutech.cursos.model.Curso;
-import com.edutech.cursos.service.CursoService;
+import com.edutech.cursos.service.CursoServiceImpl;
 
 @RestController
 @RequestMapping("/cursos")
 public class CursoController {
 
-    private final CursoService cursoService;
+    private final CursoServiceImpl cursoService;
 
-    public CursoController(CursoService cursoService) {
+    public CursoController(CursoServiceImpl cursoService) {
         this.cursoService = cursoService;
     }
 

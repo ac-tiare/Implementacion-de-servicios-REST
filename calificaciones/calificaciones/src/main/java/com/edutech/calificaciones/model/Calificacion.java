@@ -14,9 +14,9 @@ public class Calificacion {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private Long idEstudiante;
+    private Long usuarioId;
     private Long idCurso;
-    private Long idEvaluacion;
+    private Long evaluacionId;
     private Double nota;
     private LocalDate fechaCalificacion;
 
@@ -24,12 +24,12 @@ public class Calificacion {
     public Calificacion() {
     }
     
-    public Calificacion(Long id, Long idEstudiante, Long idCurso, Long idEvaluacion, Double nota,
+    public Calificacion(Long id, Long usuarioId, Long idCurso, Long evaluacionId, Double nota,
             LocalDate fechaCalificacion) {
         this.id = id;
-        this.idEstudiante = idEstudiante;
+        this.usuarioId = usuarioId;
         this.idCurso = idCurso;
-        this.idEvaluacion = idEvaluacion;
+        this.evaluacionId = evaluacionId;
         this.nota = nota;
         this.fechaCalificacion = fechaCalificacion;
     }
@@ -37,14 +37,14 @@ public class Calificacion {
     public Long getId() {  return id; }
     public void setId(Long id) { this.id = id; }
 
-    public Long getIdEstudiante() { return idEstudiante; }
-    public void setIdEstudiante(Long idEstudiante) { this.idEstudiante = idEstudiante; }
+    public Long getUsuarioId() { return usuarioId; }
+    public void setUsuarioId(Long usuarioId) { this.usuarioId = usuarioId; }
 
     public Long getIdCurso() { return idCurso; }
     public void setIdCurso(Long idCurso) { this.idCurso = idCurso; }
 
-    public Long getIdEvaluacion() { return idEvaluacion; }
-    public void setIdEvaluacion(Long idEvaluacion) { this.idEvaluacion = idEvaluacion; }
+    public Long getEvaluacionId() { return evaluacionId; }
+    public void setEvaluacionId(Long evaluacionId) { this.evaluacionId = evaluacionId; }
 
     public Double getNota() { return nota; }
     public void setNota(Double nota) { this.nota = nota; }

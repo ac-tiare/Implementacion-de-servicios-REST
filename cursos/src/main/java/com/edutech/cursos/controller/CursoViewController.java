@@ -7,14 +7,14 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import com.edutech.cursos.model.Curso;
-import com.edutech.cursos.service.CursoService;
+import com.edutech.cursos.service.CursoServiceImpl;
 
 @Controller
 public class CursoViewController {
 
-    private final CursoService cursoService;
+    private final CursoServiceImpl cursoService;
 
-    public CursoViewController(CursoService cursoService) {
+    public CursoViewController(CursoServiceImpl cursoService) {
         this.cursoService = cursoService;
     }
 
